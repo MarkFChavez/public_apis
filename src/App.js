@@ -37,9 +37,9 @@ class App extends Component {
       .filter(entry => entry.Category === this.state.selectedCategory)
   }
 
-  render() {
+  render () {
     return (
-      <div>
+      <div style={{ textAlign: 'center' }}>
         <Header> Public APIs <small> by toddmotto </small> </Header>
         <SearchForm categories={this.getCategories()} onSelect={this.onSelect} />
         {this.state.selectedCategory && <ApiList entries={this.getEntries()} />}

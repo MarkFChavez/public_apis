@@ -1,7 +1,9 @@
 import React from 'react'
 
 const Header = props => (
-  <header> {props.children} </header>
+  <header>
+    <h1> {props.children} </h1>
+  </header>
 )
 
 export default Header
