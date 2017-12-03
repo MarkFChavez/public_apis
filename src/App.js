@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import SearchForm from './components/SearchForm'
 import Heading from './components/Heading'
 import ApiList from './components/ApiList'
+import { Grid } from 'semantic-ui-react'
 
 const API_URL = 'https://raw.githubusercontent.com/toddmotto/public-apis/master/json/entries.json'
 
@@ -28,8 +29,8 @@ class App extends Component {
       .filter( onlyUnique )
   }
 
-  onSelect (e) {
-    this.setState({ selectedCategory: e.target.value })
+  onSelect (event, data) {
+    this.setState({ selectedCategory: data.value })
   }
 
   getEntries () {
@@ -39,13 +40,29 @@ class App extends Component {
 
   render () {
     return (
-      <div style={{ textAlign: 'center' }}>
-        <Heading>
-          Public APIs
-        </Heading>
-        <SearchForm categories={this.getCategories()} onSelect={this.onSelect} />
-        {this.state.selectedCategory && <ApiList entries={this.getEntries()} />}
-      </div>
+      <Grid container centered>
+        <Grid.Row>
+          <Grid.Column>
+            <Heading>
+              Public APIs
+            </Heading>
+          </Grid.Column>
+        </Grid.Row>
+
+        <Grid.Row>
+          <Grid.Column>
+            <SearchForm categories={this.getCategories()} onSelect={this.onSelect} />
+          </Grid.Column>
+        </Grid.Row>
+
+        {this.state.selectedCategory && (
+          <Grid.Row>
+            <Grid.Column>
+              <ApiList entries={this.getEntries()} />
+            </Grid.Column>
+          </Grid.Row>
+        )}
+      </Grid>
     )
   }
 }
