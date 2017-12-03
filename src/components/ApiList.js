@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Table, Rating } from 'semantic-ui-react'
+import { Header, Table } from 'semantic-ui-react'
 
 const ApiList = props => (
   <Table celled padded color='green'>
