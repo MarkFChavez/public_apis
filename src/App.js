@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import Header from './components/Header'
 import SearchForm from './components/SearchForm'
+import Heading from './components/Heading'
 import ApiList from './components/ApiList'
 
 const API_URL = 'https://raw.githubusercontent.com/toddmotto/public-apis/master/json/entries.json'
@@ -40,7 +40,9 @@ class App extends Component {
   render () {
     return (
       <div style={{ textAlign: 'center' }}>
-        <Header> Public APIs <small> by toddmotto </small> </Header>
+        <Heading>
+          Public APIs
+        </Heading>
         <SearchForm categories={this.getCategories()} onSelect={this.onSelect} />
         {this.state.selectedCategory && <ApiList entries={this.getEntries()} />}
       </div>

@@ -6,10 +6,8 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-scripts": "1.0.17",
-    "typography": "^0.16.6",
-    "typography-theme-alton": "^0.15.10",
-    "typography-theme-de-young": "^0.16.9",
-    "typography-theme-funston": "^0.15.10"
+    "semantic-ui-css": "^2.2.12",
+    "semantic-ui-react": "^0.77.0"
   },
   "scripts": {
     "start": "react-scripts start",
