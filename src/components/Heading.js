@@ -11,7 +11,7 @@ const Heading = props => (
     <Header.Subheader>
       Amazing work by <a href='https://twitter.com/toddmotto'>@toddmotto</a>. You
       can <a href='https://github.com/toddmotto/public-apis'>contribute</a> to
-      make this list more awesome as it is now!
+      make this list extra awesome!
     </Header.Subheader>
   </Header>
 )
